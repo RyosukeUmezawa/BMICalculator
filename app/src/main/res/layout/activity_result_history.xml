@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ResultHistoryActivity">
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bmi_result"
+        android:textSize="30sp"
+        android:layout_alignTop="@+id/textPast"
+        android:layout_toRightOf="@+id/height"
+        android:layout_toEndOf="@+id/height" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/standardWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:onClick="onClickBack"
+        android:text="@string/back" />
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textResult"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/textcoron1"
+        android:layout_toRightOf="@+id/textcoron1"
+        android:text="@string/default_num" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/height"
+        android:layout_alignStart="@+id/height"
+        android:layout_below="@+id/height"
+        android:layout_marginTop="20dp"
+        android:text="@string/default_num" />
+
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weight"
+        android:layout_alignStart="@+id/weight"
+        android:layout_below="@+id/weight"
+        android:layout_marginTop="20dp"
+        android:text="@string/default_num" />
+
+    <TextView
+        android:id="@+id/bmiJudg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/default_num"
+        android:layout_below="@+id/bmi"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonBack"
+        android:layout_alignStart="@+id/buttonBack"
+        android:layout_alignTop="@+id/height"
+        android:text="@string/bmi_height" />
+
+    <TextView
+        android:id="@+id/textWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textHeight"
+        android:layout_alignRight="@+id/textHeight"
+        android:layout_alignTop="@+id/weight"
+        android:text="@string/bmi_weight" />
+
+    <TextView
+        android:id="@+id/textBmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textWeight"
+        android:layout_alignRight="@+id/textWeight"
+        android:layout_alignTop="@+id/bmi"
+        android:text="@string/bmi" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_body_type"
+        android:layout_alignTop="@+id/bmiJudg"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desu"
+        android:layout_alignTop="@+id/bmiJudg"
+        android:layout_toRightOf="@+id/bmiJudg"
+        android:layout_toEndOf="@+id/bmiJudg" />
+
+    <TextView
+        android:id="@+id/standardWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bmi"
+        android:layout_alignStart="@+id/bmi"
+        android:layout_below="@+id/bmiJudg"
+        android:layout_marginTop="20dp"
+        android:text="@string/default_num" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/standard_weight"
+        android:layout_alignBaseline="@+id/standardWeight"
+        android:layout_alignBottom="@+id/standardWeight"
+        android:layout_toLeftOf="@+id/standardWeight"
+        android:layout_toStartOf="@+id/standardWeight" />
+
+    <TextView
+        android:id="@+id/textcm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cm"
+        android:layout_alignTop="@+id/height"
+        android:layout_alignLeft="@+id/textkg2"
+        android:layout_alignStart="@+id/textkg2" />
+
+
+    <TextView
+        android:id="@+id/textkg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bmi"
+        android:layout_alignLeft="@+id/textcm"
+        android:layout_alignStart="@+id/textcm"
+        android:text="@string/kg" />
+
+
+    <TextView
+        android:id="@+id/textkg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/standardWeight"
+        android:layout_toEndOf="@+id/standardWeight"
+        android:layout_toRightOf="@+id/standardWeight"
+        android:text="@string/kg" />
+
+    <TextView
+        android:id="@+id/textcoron1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/height"
+        android:layout_toEndOf="@+id/textBmi"
+        android:layout_toRightOf="@+id/textBmi"
+        android:text="@string/coron"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textCoron2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textcoron1"
+        android:layout_alignStart="@+id/textcoron1"
+        android:layout_alignTop="@+id/weight"
+        android:text="@string/coron"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textCoron3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bmi"
+        android:layout_alignBottom="@+id/bmi"
+        android:layout_toEndOf="@+id/textBmi"
+        android:layout_toRightOf="@+id/textBmi"
+        android:text="@string/coron"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="測定日"
+        android:id="@+id/textDate"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coron"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignTop="@+id/textDate"
+        android:layout_toRightOf="@+id/textDate"
+        android:layout_toEndOf="@+id/textDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_num"
+        android:id="@+id/date"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignLeft="@+id/textCoron3"
+        android:layout_alignStart="@+id/textCoron3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/past"
+        android:id="@+id/textPast"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textResult"
+        android:layout_toStartOf="@+id/textResult"
+        android:textSize="30sp"
+        />
+</RelativeLayout>
